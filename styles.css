@@ -1,0 +1,147 @@
+body, html {
+    width: 500px; /* Ajusta el ancho deseado */
+}
+
+#float-copy-button {
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    background-color: #f98700;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 10000;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+#float-copy-button:hover {
+    background-color: #4CAF50;
+    color: #f0f0f0;
+}
+
+#copy-notification {
+    position: fixed;
+    right: 20px;
+    background-color: #f98900;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    z-index: 10001;
+    display: none;
+}
+
+#copy-notification.notification.success {
+    display: block;
+    animation: fadeInOut 3s forwards;
+}
+
+#copy-notification.notification.error {
+    display: block;
+    background-color: #f98700;
+    animation: fadeInOut 3s forwards;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; bottom: 70px; display: none; }
+    10%, 90% { opacity: 1; bottom: 80px; display: block; }
+}
+
+
+#historial-casos {
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    overflow-y: auto;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 0.5vw;
+}
+
+.caso {
+    background-color: #e7e6e6;
+    border-left: 5px solid;
+    padding: 10px;
+    margin-bottom: 10px;
+    animation: fadeIn 0.5s;
+    border-radius: 1vw;
+}
+
+.caso-WO { border-color: #4CAF50; }
+.caso-INC { border-color: red; }
+.caso-INC .caso-title{color: red; }
+
+.caso-title {
+    font-size: 16px;
+    margin-bottom: 5px;
+    color: #4CAF50;
+    padding: 1vw;
+    letter-spacing: 1vw;
+    font-weight: 900;
+}
+
+.caso-content {
+    font-size: 14px;
+    color: #333;
+}
+
+.copy-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    float: right;
+    border-radius: 1vw;
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.search-input {
+    padding: 5px;
+    margin-right: 5px;
+    width: 80%;
+    border-radius: 1vw;
+}
+
+.search-btn {
+    background-color: #333;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #f0f0f0;
+    border-radius: 1vw;
+}
+
+
+/*------------------------------------------------------*/
+
+.go-to-url-btn {
+    display: inline-block;
+    float: right;
+    background-color: #f98700;
+    color: white;
+    padding: 5px 10px;
+    margin-right: 1vw;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 5px;
+}
+

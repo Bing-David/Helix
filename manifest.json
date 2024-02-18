@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Helix-Copy",
+    "version": "1.0",
+    "permissions": ["activeTab", "storage", "clipboardWrite"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["https://sena-smartit.onbmc.com/*"],
+        "js": ["content.js"],
+        "css": ["styles.css"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "ICON_128.png"
+    },
+    "icons": {
+        "16": "ICON_16.png",
+        "48": "ICON_48.png",
+        "128": "ICON_128.png"
+      }
+  }
+  
