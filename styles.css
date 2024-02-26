@@ -1,11 +1,10 @@
 body, html {
     width: 500px; /* Ajusta el ancho deseado */
 }
-
-#float-copy-button {
+#float-note-button{
     position: fixed;
     bottom: 20px;
-    left: 10px;
+    left: 130px;
     background-color: #f98700;
     padding: 10px 20px;
     border-radius: 25px;
@@ -16,9 +15,32 @@ body, html {
     font-weight: 900;
     font-size: 1.5rem;
 }
+#float-copy-button{
+    position: fixed;
+    bottom: 20px;
+    left: 10px;
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 10000;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    font-weight: 900;
+    font-size: 1.5rem;
+}
+
+#float-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
 
 #float-copy-button:hover {
-    background-color: #4CAF50;
+    background-color: #f98700;
     color: #f0f0f0;
 }
 
