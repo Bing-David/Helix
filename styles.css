@@ -1,5 +1,6 @@
 body, html {
     width: 500px; /* Ajusta el ancho deseado */
+    background-color: #ffffff;
 }
 #float-note-button{
     position: fixed;
@@ -36,6 +37,11 @@ body, html {
 }
 
 
+#historial-casos {
+    height: 300px; /* Altura fija */
+    overflow-y: auto;
+    /* Otros estilos... */
+}
 
 
 
@@ -94,6 +100,8 @@ body, html {
     animation: fadeIn 0.5s;
     border-radius: 1vw;
 }
+.caso-TAS { border-color: #FAA300; }
+.caso-TAS .caso-title { color: #FAA300; }
 
 .caso-WO { border-color: #4CAF50; }
 .caso-INC { border-color: red; }
@@ -167,3 +175,25 @@ body, html {
     border-radius: 5px;
 }
 
+
+
+/*-----------*/
+
+
+::-webkit-scrollbar {
+    width: 12px; /* Ancho del scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color de fondo del scrollbar */
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #f98700; /* Color del scrollbar */
+    border-radius: 6px; /* Radio de borde del thumb */
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color del scrollbar cuando se pasa el cursor sobre él */
+  }
+  

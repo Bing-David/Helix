@@ -1,19 +1,3 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const contenedorHistorial = document.getElementById('historial-casos');
-    chrome.storage.local.get(['copiedCases'], function(result) {
-        const casos = result.copiedCases || [];
-        casos.forEach(caso => {
-            const elementoCaso = document.createElement('div');
-            elementoCaso.textContent = caso.content;
-            elementoCaso.className = caso.type.startsWith("WO") ? "" : "caso-inc";
-            elementoCaso.addEventListener('click', () => navigator.clipboard.writeText(caso.content));
-            contenedorHistorial.appendChild(elementoCaso);
-        });
-    });
-});
-
-
-
 document.addEventListener('DOMContentLoaded', function() { 
     const contenedorHistorial = document.getElementById('historial-casos');
     const searchContainer = document.createElement('div');
@@ -43,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
             casoElement.className = `caso caso-${caso.type}`;
 
             // Extrae el número de caso del contenido
-            const casoNumberMatch = caso.content.match(/(WO|INC)\d+/);
+            const casoNumberMatch = caso.content.match(/(WO|INC|TAS)\d+/);
             const casoNumber = casoNumberMatch ? casoNumberMatch[0] : "Número de caso no disponible";
          
             casoElement.innerHTML = `
@@ -59,6 +43,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-
-
