@@ -5,42 +5,43 @@ body, html {
 #float-note-button{
     position: fixed;
     bottom: 20px;
-    left: 130px;
     background-color: #f98700;
+    margin-left: 12rem;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 20px;
     cursor: pointer;
     z-index: 10000;
     transition: background-color 0.3s ease;
     text-align: center;
     font-weight: 900;
     font-size: 1.5rem;
+    opacity: 80%;
 }
 #float-copy-button{
     position: fixed;
     bottom: 20px;
-    left: 10px;
     background-color: #4CAF50;
     padding: 10px 20px;
-    border-radius: 25px;
+    border-radius: 20px;
     cursor: pointer;
     z-index: 10000;
     transition: background-color 0.3s ease;
     text-align: center;
     font-weight: 900;
     font-size: 1.5rem;
+    opacity: 80%;
 }
 
 #float-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    margin-left: 46%
 }
-
 
 #historial-casos {
     height: 300px; /* Altura fija */
     overflow-y: auto;
-    /* Otros estilos... */
 }
 
 
